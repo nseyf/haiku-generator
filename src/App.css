@@ -1,7 +1,6 @@
 .App {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  outline: 1px solid black;
 }
 
 .haiku-generator {
@@ -10,5 +9,43 @@
 }
 
 .haiku-line {
-  font-size: 40px;
+  font-style: italic;
+  font-size: 50px;
+  color: white;
+  transition: 1s;
+  background: white;
+  padding: 20px;
+  margin-bottom: 0px;
+  display: inline-block;
+  color: black;
+  font-family: "Cormorant Garamond";
+}
+
+.haiku-button {
+  font-size: 20px;
+  padding: 15px;
+  display: block;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
+
+
+@media (max-width: 400px) {
+  .App {
+    grid-template-columns: 1;
+    display: grid;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .haiku-generator {
+    padding: 0px;
+    grid-column: 1 / span -1;
+  }
+  .haiku-line {
+    font-size: 30px;
+  }
 }

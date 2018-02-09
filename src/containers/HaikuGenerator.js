@@ -8,18 +8,20 @@ import {
 class HaikuGenerator extends Component {
   
   componentDidMount() {
-    console.log(this.props.generateHaiku)
     this.props.generateHaiku(this.props.words)
   }
   
   render() {
-    console.log(this.props);
     return (
       <div className="haiku-generator">
       <h1>Haiku Generator </h1>
       <p className="haiku-line">{this.props.haiku.firstLine}</p>
       <p className="haiku-line">{this.props.haiku.secondLine}</p>
       <p className="haiku-line">{this.props.haiku.thirdLine}</p>
+      
+      <button className="haiku-button" onClick={() => {this.props.generateHaiku(this.props.words)}}>
+      New Haiku
+      </button>
       </div>
     )
   }

@@ -14,9 +14,10 @@ class HaikuGenerator extends Component {
   render() {
     return (
       <div className="haiku-generator">
-      <h1>Haiku Generator </h1>
       <p className="haiku-line">{this.props.haiku.firstLine}</p>
+      <br />
       <p className="haiku-line">{this.props.haiku.secondLine}</p>
+      <br />
       <p className="haiku-line">{this.props.haiku.thirdLine}</p>
       
       <button className="haiku-button" onClick={() => {this.props.generateHaiku(this.props.words)}}>

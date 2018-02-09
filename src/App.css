@@ -16,7 +16,6 @@
 .haiku-line-show {
   font-style: italic;
   font-size: 50px;
-  transition: 0.5s;
   color: white;
   text-align: center;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
@@ -41,7 +40,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .App {
     grid-template-columns: 1;
     display: grid;

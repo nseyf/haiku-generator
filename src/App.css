@@ -9,24 +9,31 @@
   font-family: "Cormorant Garamond";
 }
 
-.haiku-line {
+.haiku-line-hide {
+  display: none;
+}
+
+.haiku-line-show {
   font-style: italic;
   font-size: 50px;
+  transition: 0.5s;
   color: white;
+  text-align: center;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
-  transition: 0.2s;
   background: white;
   padding: 40px;
   margin-bottom: 0px;
-  display: inline-block;
   color: black;
 }
 
 .haiku-button {
+  font-style: italic;
   margin: 0 auto;
   font-size: 20px;
   padding: 15px;
+  border: 0px;
   display: block;
+    font-family: "Cormorant Garamond";
   margin-top: 20px;
   cursor: pointer;
   box-shadow: 0 8px 13px 0 rgba(0,0,0,0.4);
@@ -46,7 +53,7 @@
     padding: 0px;
     grid-column: 1 / span -1;
   }
-  .haiku-line {
+  .haiku-line-show {
     font-size: 30px;
     padding: 20px;
   }

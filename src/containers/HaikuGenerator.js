@@ -7,18 +7,15 @@ import {
 
 class HaikuGenerator extends Component {
   
-  componentDidMount() {
-    this.props.generateHaiku(this.props.words)
-  }
-  
   render() {
+    console.log(this.props);
     return (
       <div className="haiku-generator">
-      <p className="haiku-line">{this.props.haiku.firstLine}</p>
+      <p className={this.props.haikuDisplay}>{this.props.haiku.firstLine}</p>
       <br />
-      <p className="haiku-line">{this.props.haiku.secondLine}</p>
+      <p className={this.props.haikuDisplay}>{this.props.haiku.secondLine}</p>
       <br />
-      <p className="haiku-line">{this.props.haiku.thirdLine}</p>
+      <p className={this.props.haikuDisplay}>{this.props.haiku.thirdLine}</p>
       
       <button className="haiku-button" onClick={() => {this.props.generateHaiku(this.props.words)}}>
       New Haiku
@@ -32,7 +29,8 @@ class HaikuGenerator extends Component {
 const mapStateToProps = (state) => {
   return {
     haiku: state.haiku,
-    words: state.words
+    words: state.words,
+    haikuDisplay: state.haikuDisplay
   }
 };
 

@@ -1,0 +1,10 @@
+.App {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  outline: 1px solid black;
+}
+
+.haiku-generator {
+  grid-column: 2 / span 3;
+  background: red;
+}

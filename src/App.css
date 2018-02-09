@@ -6,5 +6,9 @@
 
 .haiku-generator {
   grid-column: 2 / span 3;
-  background: red;
+  padding: 30px;
+}
+
+.haiku-line {
+  font-size: 40px;
 }

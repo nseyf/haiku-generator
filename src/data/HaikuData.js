@@ -1,4 +1,4 @@
-export const  data = { 
+const data = { 
   firstLine: [
     "I remove my clothes",
     "Father Gorilla",
@@ -40,5 +40,6 @@ thirdLine: [
   "The aliens have me",
   "So incandescent"
 ]
-
 }
+
+export default data;

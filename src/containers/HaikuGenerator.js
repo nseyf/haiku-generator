@@ -8,16 +8,18 @@ import {
 class HaikuGenerator extends Component {
   
   componentDidMount() {
-    this.props.generateHaiku()
+    console.log(this.props.generateHaiku)
+    this.props.generateHaiku(this.props.words)
   }
   
   render() {
     console.log(this.props);
     return (
       <div className="haiku-generator">
-      <p>{this.props.haiku.firstLine}</p>
-      <p>{this.props.haiku.secondLine}</p>
-      <p>{this.props.haiku.thirdLine}</p>
+      <h1>Haiku Generator </h1>
+      <p className="haiku-line">{this.props.haiku.firstLine}</p>
+      <p className="haiku-line">{this.props.haiku.secondLine}</p>
+      <p className="haiku-line">{this.props.haiku.thirdLine}</p>
       </div>
     )
   }
@@ -26,7 +28,8 @@ class HaikuGenerator extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    haiku: state.haiku
+    haiku: state.haiku,
+    words: state.words
   }
 };
 

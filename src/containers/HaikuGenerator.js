@@ -22,6 +22,8 @@ class HaikuGenerator extends Component {
       <br />
       <p className={this.props.haikuDisplay}>{thirdLine}</p>
 
+
+      <div className="haiku-buttons">
       <button className="haiku-button"
       onClick={() => {generateHaiku(words)}}>
       New Haiku
@@ -30,6 +32,9 @@ class HaikuGenerator extends Component {
       data-size="large"
       href={tweetUrl}>
       Tweet Haiku</a>
+      </div>
+
+
       </div>
     )
   }

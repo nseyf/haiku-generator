@@ -1,11 +1,14 @@
 .App {
   display: grid;
+  top: 0;
+  bottom: 0;
   grid-template-columns: repeat(5, 1fr);
 }
 
 .haiku-generator {
   grid-column: 2 / span 3;
   padding: 30px;
+  /* box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4); */
   font-family: "Cormorant Garamond";
 }
 
@@ -14,15 +17,11 @@
 }
 
 .haiku-line-show {
-  font-style: italic;
-  font-size: 50px;
-  color: white;
+  font-size: 60px;
   text-align: center;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
-  background: white;
-  padding: 40px;
+  padding: 10px;
   margin-bottom: 0px;
-  color: black;
+  color: white;
 }
 
 
@@ -35,6 +34,7 @@
   margin: 0 auto;
   font-size: 20px;
   text-align: center;
+  width: 80px;
   padding: 15px;
   border: 0px;
   display: block;
@@ -56,12 +56,13 @@
   font-size: 20px;
   color: black;
   cursor:pointer;
-  width: auto;
+  margin: 0 auto;
   text-align: center;
   display: block;
   font-weight: 900;
   padding: 15px;
   text-decoration: none;
+  width: 80px;
   font-style: italic;
   box-shadow: 0 8px 13px 0 rgba(0,0,0,0.4);
   background: white;

@@ -8,10 +8,13 @@ import {
 class HaikuGenerator extends Component {
 
   render() {
-    console.log(this.props);
+
     const { haiku, generateHaiku, words } = this.props;
+
     const { firstLine, secondLine, thirdLine } = haiku;
-    const haikuString = `${firstLine}%20%0A%20${secondLine}%20%0A%20${thirdLine}`
+
+    const haikuString = `${firstLine}%20%0A%20${secondLine}%20%0A%20${thirdLine}`;
+
     const tweetUrl = `https://twitter.com/intent/tweet?text=${haikuString}`;
 
     return (

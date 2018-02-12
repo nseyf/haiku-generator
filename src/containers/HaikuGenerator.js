@@ -6,31 +6,42 @@ import {
 } from '../actions/actions';
 
 class HaikuGenerator extends Component {
-  
+
   render() {
     console.log(this.props);
+    const { haiku, generateHaiku, words } = this.props;
+    const { firstLine, secondLine, thirdLine } = haiku;
+    const haikuString = `${firstLine}%20%0A%20${secondLine}%20%0A%20${thirdLine}`
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${haikuString}`;
+
     return (
       <div className="haiku-generator">
-      <p className={this.props.haikuDisplay}>{this.props.haiku.firstLine}</p>
+      <p className={this.props.haikuDisplay}>{firstLine}</p>
       <br />
-      <p className={this.props.haikuDisplay}>{this.props.haiku.secondLine}</p>
+      <p className={this.props.haikuDisplay}>{secondLine}</p>
       <br />
-      <p className={this.props.haikuDisplay}>{this.props.haiku.thirdLine}</p>
-      
-      <button className="haiku-button" onClick={() => {this.props.generateHaiku(this.props.words)}}>
+      <p className={this.props.haikuDisplay}>{thirdLine}</p>
+
+      <button className="haiku-button"
+      onClick={() => {generateHaiku(words)}}>
       New Haiku
       </button>
+      <a className={this.props.tweetDisplay}
+      data-size="large"
+      href={tweetUrl}>
+      Tweet Haiku</a>
       </div>
     )
   }
-  
+
 }
 
 const mapStateToProps = (state) => {
   return {
     haiku: state.haiku,
     words: state.words,
-    haikuDisplay: state.haikuDisplay
+    haikuDisplay: state.haikuDisplay,
+    tweetDisplay: state.tweetDisplay
   }
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import DisplayHaiku from '../components/DisplayHaiku';
 import { bindActionCreators } from 'redux';
 import {
   generateHaiku
@@ -9,29 +10,27 @@ class HaikuGenerator extends Component {
 
   render() {
 
-    const { haiku, generateHaiku, words } = this.props;
 
+    // Grab what we need from props
+    const { haiku, generateHaiku, words, haikuDisplay, tweetDisplay } = this.props;
+    // Allow access to each line of the haiku
     const { firstLine, secondLine, thirdLine } = haiku;
-
+    // Create a string to compose a tweet
     const haikuString = `${firstLine}%20%0A%20${secondLine}%20%0A%20${thirdLine}`;
-
+    // Create a URL link to tweet the haiku
     const tweetUrl = `https://twitter.com/intent/tweet?text=${haikuString}`;
 
     return (
       <div className="haiku-generator">
-      <p className={this.props.haikuDisplay}>{firstLine}</p>
-      <br />
-      <p className={this.props.haikuDisplay}>{secondLine}</p>
-      <br />
-      <p className={this.props.haikuDisplay}>{thirdLine}</p>
 
+      <DisplayHaiku haiku={haiku} haikuDisplay={haikuDisplay} />
 
       <div className="haiku-buttons">
       <button className="haiku-button"
       onClick={() => {generateHaiku(words)}}>
       New Haiku
       </button>
-      <a className={this.props.tweetDisplay}
+      <a className={tweetDisplay}
       data-size="large"
       href={tweetUrl}>
       Tweet Haiku</a>

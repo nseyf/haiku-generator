@@ -5,12 +5,12 @@ const DisplayHaiku = (props) => {
 
   const { haiku, haikuDisplay } = props;
 return (
-  <div>
-  <p className={haikuDisplay}>{haiku.firstLine}</p>
+  <div className={haikuDisplay}>
+  <p>{haiku.firstLine}</p>
   <br />
-  <p className={haikuDisplay}>{haiku.secondLine}</p>
+  <p>{haiku.secondLine}</p>
   <br />
-  <p className={haikuDisplay}>{haiku.thirdLine}</p>
+  <p>{haiku.thirdLine}</p>
   </div>
 )
 }

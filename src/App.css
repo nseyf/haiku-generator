@@ -1,7 +1,5 @@
 .App {
   display: grid;
-  top: 0;
-  bottom: 0;
   grid-template-columns: repeat(5, 1fr);
 }
 
@@ -12,19 +10,24 @@
   font-family: "Cormorant Garamond";
 }
 
+
 .haiku-line-hide {
   display: none;
 }
 
 .haiku-line-show {
-  font-size: 60px;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 0px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
+  font-size: 40px;
+  padding: 20px;
   color: white;
   font-weight: 300;
 }
 
+.haiku-line-show p {
+  padding-left: 10px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
 
 .haiku-buttons {
   margin: 0 auto;
@@ -82,6 +85,15 @@
   .haiku-line-show {
     font-size: 30px;
     padding: 20px;
+  }
+  .haiku-button {
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+  .tweet-button-show {
+    font-size: 15px;
+    padding: 10px;
   }
 }
 

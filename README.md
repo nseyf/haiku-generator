@@ -1,1 +1,0 @@
-## Haiku Generator

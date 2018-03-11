@@ -3,6 +3,8 @@ import React from 'react';
 
 const DisplayHaiku = (props) => {
 
+  // Grab the haiku object as well as the
+  // haikuDisplay property
   const { haiku, haikuDisplay } = props;
 return (
   <div className={haikuDisplay}>
